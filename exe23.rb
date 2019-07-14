@@ -26,3 +26,10 @@ main_array << second
 main_array << third
 main_array << fourth
 p main_array
+
+#there is another method described in ruby3.rb
+#it can solved if data_arr (0) is separated as a hash containing keys hash=[:Name, :Position, :Age, :Salary]
+#each key should have the value as hash[:name]=data_arr[1][0] it will assign name to "Adrian Lim" and same for other values
+#repeating this line of code will give one hash for Adrina only 
+#apply this to all characters
+#push all the hashes into main array 

@@ -6,8 +6,12 @@
 
 def validate_email(string)
     #Your code here
-   if string=~  (/[0-9a-zA-Z("@)]+.?\W/)
-    return "Incomplete"
+   if string =~ (/(['"])(.+)([a-zA-Z]+.?)\D.*[\S]/)
+      #(/\A([a-zA-Z]+[@][a-z]+.[a-z]+)/i)
+      puts "valid email"
+   else
+      puts "invalid email"
+
    end
 end
 

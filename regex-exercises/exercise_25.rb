@@ -18,14 +18,30 @@
 
 def extract_integer(input_string)
  regex=input_string.scan(/\d+|-\d+/)
- #puts regex
+ p regex
  #or
  #array.each_with_object(Hash.new(0)) { |number,v| hash[number] += 1 }
-
  count=Hash.new (0)
- regex.each do |number|
-    #p count[number] +=1
-    p "#{number}: #{count[number] +=1} times"
+ regex.each do |number| 
+     count[number] +=1
+ end
+#p count
+count.each do |number,v|
+p "#{number}: #{count[number]} times"
+end
+end
+input = "dS-23a1lt578jmnw-1n-23bsi-12p7nbh7asd23mbj578frew1a7oo903o7mk12arr909oposdf435rr"
+
+extract_integer(input)
+
+
+
+
+
+
+
+
+# output= "#{number}: #{count[number] +=1} times"
  
  #hash=Hash[regex.collect {|numbers,value| p [numbers,0]}]
  #p hash
@@ -33,8 +49,3 @@ def extract_integer(input_string)
   
  #hash.count do |numbers,v|
  #from here i wanna count the values's occurences 
-end
-end
-input = "dS-23a1lt578jmnw-1n-23bsi-12p7nbh7asd23mbj578frew1a7oo903o7mk12arr909oposdf435rr"
-
-extract_integer(input)
